@@ -1,9 +1,11 @@
 <!DOCTYPE HTML>
-<html  lang="zh-CN">
-    <script src="static/js/jquery.min.js"></script>
-<!--	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script> --><!--如果主题已经引用了jQuery库，可以忽略这条-->
+<html lang="zh-CN">
+<script src="static/js/jquery.min.js"></script>
+<!--	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script> -->
+<!--如果主题已经引用了jQuery库，可以忽略这条-->
 <link rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.2/jquery.fancybox.min.css">
 <script src="https://cdn.staticfile.org/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+
 <head>
     <meta http-equiv="Content-Type" charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
@@ -15,119 +17,207 @@
 
     <!-- 通过自有函数输出HTML头部信息 -->
 </head>
+
 <body>
 
-<header>
-    <div class="header-top">
-        <div class="logo">
-            <a href="https://art.idealdestructor.com">
-                <img src="static/img/logo.png" alt="">
-                <div class="site-name"><a>Illustration & Photography</a></div>
-            </a>
-        </div>
-        <div class="nav">
-            <ul>
-                <a class="subnav-item" href="https://photo.idealdestructor.com"><li class="subnav-li">HOME</li></a>
-            </ul>
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <a href="https://art.idealdestructor.com">
+                    <img src="static/img/logo.png" alt="">
+                    <div class="site-name"><a>Illustration & Photography</a></div>
+                </a>
+            </div>
+            <div class="nav">
+                <ul>
+                    <a class="subnav-item" href="https://art.idealdestructor.com">
+                        <li class="subnav-li">HOME</li>
+                    </a>
+                </ul>
 
                 <ul class="socials">
                     <div class="slide"></div>
-                        <li>
-                            <a href="https://www.cnu.cc/users/306801" target="_blank">
-                                <img class="social-icon" src="static/img/cnu.svg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.artstation.com/idealdestructor" target="_blank">
-                                <img class="social-icon" src="static/img/artstation.svg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.behance.net/idealdestructor" target="_blank">
-                                <img class="social-icon" src="static/img/behance.svg">
-                            </a>
-                        </li>
-                        <!-- <li>
+                    <li>
+                        <a href="http://www.cnu.cc/users/306801" target="_blank">
+                            <img class="social-icon" src="static/img/cnu.svg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.artstation.com/idealdestructor" target="_blank">
+                            <img class="social-icon" src="static/img/artstation.svg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.behance.net/idealdestructor" target="_blank">
+                            <img class="social-icon" src="static/img/behance.svg">
+                        </a>
+                    </li>
+                    <!-- <li>
                             <a href="" target="_blank">
                                 <img class="social-icon" src="static/img/ideallogo.gif">
                             </a>
                         </li> -->
                 </ul>
+            </div>
         </div>
-    </div>
         <div class="header-bottom">
             <div class="categories-container">
                 <div class="categories">
-                   
-                        <ul class="categories-list">
-                                <li><a href="/"><div class="categories-single">All Stories</div></a></li>
-                           
-                            <li class="slide"></li>
-                                    <li>
-                                        <a href="" title="5个话题">
-                                            <div class="categories-single category-current">
-                                                LIFE
-                                            </div>
-                                        </a>
-                                    </li>
-                                
-                        </ul>
-                </div>
-            </div>
-        </div>
-</header>
-<div class="container">
-    <div class="banner" style="background: url(https://s1.ax1x.com/2020/04/14/GzCOT1.png)">
-        <div class="banner-content">
-            <div class="banner-heading">析构理想</div>
-            <div class="banner-description">There was nowhere to go but everywhere, so just keep on rolling under the stars.</div>
-            
-            <div class="site-data">
-                <div class="banner-column banner-column-left">100<p>Pictures</p></div>
-                <div class="banner-column banner-column-center">6<p>Categories</p></div>
-                <div class="banner-column banner-column-right">1090<p>Views</p></div>
-            </div>
-        </div>
-        <div class="banner-info">
-            <div class="week" style="">c o p y r i g h t  ©  I d e a l d e s t r u c t o r </div>
-        </div>
-    </div>
-    <div class="articles" id="grid">
-    <div class="grid-item"> 
-        <a href="" data-fancybox="gallery" title=""/>
-            <img src="https://s1.ax1x.com/2020/04/12/GLF7FS.jpg">
-                <div class="item-info">
-                    <div class="title" style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center"></div>
-                    <div class="pics-count" style="opacity:0.9"><img src="static/img/address-min.svg"><div></div></div>
-                    <div class="views" style="opacity:0.9"><img src="static/img/camera-min.svg"><div></div></div>
-                    <div class="title"><img style="border-radius:70%;margin-right:10px" src="static/img/ideallogo.gif"><div></div></div>
-                </div>
-             <!--<a href="<?php $this->permalink() ?>" target="_blank">--><!--</a>--></a>
-        </div>
-    </div><script src="static/js/grids.js"></script>
 
-    <script>
-        var macy = Macy({
-            container: '#grid',
-            trueOrder: false,
-            waitForImages: false,
-            margin: 20,
-            columns: 3,
-            breakAt: {
-                920: 2,
-                620: 1
+                    <ul class="categories-list">
+                        <li><a href="">
+                                <div class="categories-single">Archieves</div>
+                            </a></li>
+
+                        <li class="slide"></li>
+                        <li>
+                            <a onClick="changetab('ALL')"
+                                title="全部">
+                                <div class="categories-single category-current" id="ALL">
+                                    ALL
+                                </div>
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a onClick="changetab('TRAVEL')"
+                                title="旅行">
+                                <div class="categories-single" id="TRAVEL">
+                                    TRAVEL
+                                </div>
+                            </a>
+                        </li> -->
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="banner" style="background: url(https://s1.ax1x.com/2020/04/14/GzCOT1.png)">
+            <div class="banner-content">
+                <div class="banner-heading">析构理想</div>
+                <div class="banner-description">There was nowhere to go but everywhere, so just keep on rolling under
+                    the stars.</div>
+
+                <div class="site-data">
+                    <div class="banner-column banner-column-left">100<p>Pictures</p>
+                    </div>
+                    <div class="banner-column banner-column-center">6<p>Categories</p>
+                    </div>
+                    <div class="banner-column banner-column-right">1090<p>Views</p>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-info">
+                <div class="week" style="">c o p y r i g h t © I d e a l d e s t r u c t o r </div>
+            </div>
+        </div>
+        
+        <div class="articles" id="grid">
+            <div class="grid-item LIFE">
+                <a href="" data-fancybox="gallery" title="" />
+                <img src="https://s1.ax1x.com/2020/04/12/GLF7FS.jpg">
+                <div class="item-info" onClick="return false;">
+                    <div class="title"
+                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
+                        秋天的小树林</div>
+                    <!-- <div class="pics-count" style="opacity:0.9"><img src="static/img/address-min.svg"><div></div></div> -->
+                    <!-- <div class="views" style="opacity:0.9"><img src="static/img/camera-min.svg"><div></div></div> -->
+                    <!-- <div class="title"><img style="border-radius:70%;margin-right:10px" src="static/img/ideallogo.gif"><div></div></div> -->
+                </div>
+                </img>
+                </a>
+            </div>
+            <div class="grid-item LIFE">
+                <a href="" data-fancybox="gallery" title="" />
+                <img
+                    src="http://imgoss.cnu.cc/2201/02/g8q58b8l3ckqdfigula1641099726140.jpg?x-oss-process=style/content">
+                <div class="item-info" onClick="return false;">
+                    <div class="title"
+                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
+                        后海重逢</div>
+                    <!-- <div class="pics-count" style="opacity:0.9"><img src="static/img/address-min.svg"><div></div></div> -->
+                    <!-- <div class="views" style="opacity:0.9"><img src="static/img/camera-min.svg"><div></div></div> -->
+                    <!-- <div class="title"><img style="border-radius:70%;margin-right:10px" src="static/img/ideallogo.gif"><div></div></div> -->
+                </div>
+                </img>
+                </a>
+            </div>
+            <div class="grid-item LIFE">
+                <a href="" data-fancybox="gallery" title="" />
+                <img
+                    src="http://imgoss.cnu.cc/2201/02/ghvjs3bdlw8tuwtmovd1641099726140.jpg?x-oss-process=style/content">
+                <div class="item-info" onClick="return false;">
+                    <div class="title"
+                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
+                        后海重逢</div>
+                    <!-- <div class="pics-count" style="opacity:0.9"><img src="static/img/address-min.svg"><div></div></div> -->
+                    <!-- <div class="views" style="opacity:0.9"><img src="static/img/camera-min.svg"><div></div></div> -->
+                    <!-- <div class="title"><img style="border-radius:70%;margin-right:10px" src="static/img/ideallogo.gif"><div></div></div> -->
+                </div>
+                </img>
+                </a>
+            </div>
+            <div class="grid-item TRAVEL">
+                <a href="" data-fancybox="gallery" title="" />
+                <img
+                    src="http://imgoss.cnu.cc/2201/02/eayt9vvk0wzl6ix2zm91641099726140.jpg?x-oss-process=style/content">
+                <div class="item-info" onClick="return false;">
+                    <div class="title"
+                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
+                        后海重逢</div>
+                    <!-- <div class="pics-count" style="opacity:0.9"><img src="static/img/address-min.svg"><div></div></div> -->
+                    <!-- <div class="views" style="opacity:0.9"><img src="static/img/camera-min.svg"><div></div></div> -->
+                    <!-- <div class="title"><img style="border-radius:70%;margin-right:10px" src="static/img/ideallogo.gif"><div></div></div> -->
+                </div>
+                </img>
+                </a>
+            </div>
+        </div>
+        <script src="static/js/grids.js"></script>
+
+        <script>
+            var macy = Macy({
+                container: '#grid',
+                trueOrder: false,
+                waitForImages: false,
+                margin: 20,
+                columns: 3,
+                breakAt: {
+                    920: 2,
+                    620: 1
+                }
+            });
+            var changetab = function(type) {
+                var tabs = document.getElementsByClassName('category-current'); 
+                tabs[0].className='categories-single';
+                var nowtab = document.getElementById(type);
+                nowtab.className="categories-single category-current" ;
+                if(type=='ALL'){
+                    var divs = document.getElementsByClassName('grid-item');for(var j=0; j<divs.length; j++){divs[j].style.display='block'}
+                }else{
+                var divs = document.getElementsByClassName('grid-item');for(var j=0; j<divs.length; j++){divs[j].style.display='none'}
+                var nowdivs = document.getElementsByClassName(type);
+                for(var i=0; i<nowdivs.length; i++){
+                    nowdivs[i].style.display="block";
+                }}
             }
-        });
-
-    </script></div>
+        </script>
+    </div>
     <footer>
         <div class="copyright" style="text-align:center">
-            Copyright ©2021 <a href="http://www.idealdestructor.com/" target="_blank">析构理想</a> All Rights Reserved | Inspired by <a href="https://nooooe.cn" target="_blank">Phomaster</a></div>
+            Copyright ©2022 <a href="http://www.idealdestructor.com/" target="_blank">析构理想</a> All Rights Reserved |
+            Inspired by <a href="https://nooooe.cn" target="_blank">Phomaster</a></div>
     </footer>
     <script type="text/javascript">
         $(document).ready(function () {
-            $( ".fancybox").fancybox();
+            $(".fancybox").fancybox();
+            
         });
     </script>
-    </body>
-    </html>
+    <style>
+         a:hover{ cursor:pointer }
+    </style>
+</body>
+
+</html>
