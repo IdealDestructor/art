@@ -182,8 +182,8 @@
                 </a>
             </div>
             <div class="grid-item SCENE">
-                <a data-fancybox="gallery" href="http://imgoss.cnu.cc/2201/02/eayt9vvk0wzl6ix2zm91641099726140.jpg?x-oss-process=style/content">
-                <img src="http://imgoss.cnu.cc/2201/02/eayt9vvk0wzl6ix2zm91641099726140.jpg?x-oss-process=style/content">
+                <a data-fancybox="gallery" href="static/pic/eayt9vvk0wzl6ix2zm91641099726140.jpg">
+                <img src="static/pic/eayt9vvk0wzl6ix2zm91641099726140.jpg">
                 <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
@@ -548,11 +548,15 @@
     </div>
     <footer>
         <div class="copyright" style="text-align:center">
-            Copyright ©2025 <a href="http://idealdestructor.github.io/" target="_blank">析构理想</a> All Rights Reserved</div>
+            Copyright ©2025 <a href="http://idealdestructor.github.io/" target="_blank">析构理想</a> All rights reserved</div>
     </footer>
     <script type="text/javascript">
+        let interval = window.setInterval(function () {
+            $(".fancybox").fancybox();
+        },1000);
         $(document).ready(function () {
             $(".fancybox").fancybox();
+            clearInterval(interval);
         });
     </script>
     <style>
