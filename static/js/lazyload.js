@@ -42,9 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
               };
             }
 
-            var myEvent = new Event("resize");
-            window.dispatchEvent(myEvent);
-
             // 图片已处理，取消观察
             observer.unobserve(img);
           }
@@ -75,6 +72,8 @@ document.addEventListener("DOMContentLoaded", function () {
         img.classList.add("lazy");
         observer.observe(img);
       });
+      var myEvent = new Event("resize");
+      window.dispatchEvent(myEvent);
     }
 
     // 监听AJAX加载完成事件
