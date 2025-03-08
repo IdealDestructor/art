@@ -24,18 +24,21 @@ document.addEventListener('DOMContentLoaded', function() {
         return categories.size;
     }
 
-    // 计算从2022.1.1到现在的天数
-    function countDays() {
-        const startDate = new Date('2022-01-01');
-        const currentDate = new Date();
+    // 计算不同地点的数量
+    function countLocations() {
+        const gridItems = document.getElementsByClassName('grid-item');
+        const locations = new Set();
         
-        // 计算时间差（毫秒）
-        const timeDiff = currentDate - startDate;
+        for (let i = 0; i < gridItems.length; i++) {
+            // 获取地点信息
+            const location = gridItems[i].getAttribute('data-location');
+            // 只统计有效的地点信息（非空且非undefined）
+            if (location && location.trim() !== "") {
+                locations.add(location);
+            }
+        }
         
-        // 转换为天数
-        const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-        
-        return daysDiff;
+        return locations.size;
     }
 
     // 更新页面上的统计数据
@@ -43,12 +46,12 @@ document.addEventListener('DOMContentLoaded', function() {
         // 获取统计元素
         const picturesElement = document.querySelector('.banner-column-left');
         const categoriesElement = document.querySelector('.banner-column-center');
-        const daysElement = document.querySelector('.banner-column-right');
+        const locationsElement = document.querySelector('.banner-column-right');
         
         // 计算统计数据
         const picturesCount = countPictures();
         const categoriesCount = countCategories();
-        const daysCount = countDays();
+        const locationsCount = countLocations();
         
         // 更新HTML内容
         if (picturesElement) {
@@ -59,8 +62,8 @@ document.addEventListener('DOMContentLoaded', function() {
             categoriesElement.innerHTML = categoriesCount + '<p>Categories</p>';
         }
         
-        if (daysElement) {
-            daysElement.innerHTML = daysCount + '<p>Days</p>';
+        if (locationsElement) {
+            locationsElement.innerHTML = locationsCount + '<p>Locations</p>';
         }
     }
     
