@@ -72,7 +72,8 @@ document.addEventListener("DOMContentLoaded", function () {
         img.classList.add("lazy");
         observer.observe(img);
       });
-      $(".fancybox").fancybox();
+      var myEvent = new Event("resize");
+      window.dispatchEvent(myEvent);
     }
 
     // 监听AJAX加载完成事件
