@@ -5,6 +5,7 @@
 <script src="https://cdn.staticfile.org/fancybox/3.5.2/jquery.fancybox.min.js"></script>
 <script src="static/js/stats.js"></script>
 <script src="static/js/lazyload.js"></script>
+<script src="static/js/modal.js"></script>
 
 <head>
     <meta charset="utf-8" />
@@ -12,6 +13,7 @@
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./static/css/modal.css">
     <link type="image/vnd.microsoft.icon" href="" rel="shortcut icon">
     <title>插画摄影｜析构理想</title>
 </head>
@@ -139,9 +141,9 @@
         
         <div class="articles" id="grid">
             <div class="grid-item SCENE">
-                <a data-fancybox="gallery">
+                <a data-fancybox="gallery" href="static/pic/005-GLF7FS.jpg">
                 <img src="static/pic/005-GLF7FS.jpg">
-                <div class="item-info" onClick="return false;">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         暮 秋 晨 光</div>
@@ -149,9 +151,9 @@
                 </a>
             </div>
             <div class="grid-item SCENE">
-                <a data-fancybox="gallery">
+                <a data-fancybox="gallery" href="static/pic/003-g8q58b8l3ckqdfigula1641099726140.jpg">
                 <img src="static/pic/003-g8q58b8l3ckqdfigula1641099726140.jpg">
-                <div class="item-info" onClick="return false;">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         夜 色 温 柔</div>
@@ -159,10 +161,9 @@
                 </a>
             </div>
             <div class="grid-item SCENE">
-                <a data-fancybox="gallery" />
-                <img
-                    src="static/pic/004-ghvjs3bdlw8tuwtmovd1641099726140.jpg">
-                <div class="item-info" onClick="return false;">
+                <a data-fancybox="gallery" href="static/pic/004-ghvjs3bdlw8tuwtmovd1641099726140.jpg">
+                <img src="static/pic/004-ghvjs3bdlw8tuwtmovd1641099726140.jpg">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         后 海 重 逢</div>
@@ -171,10 +172,9 @@
             </div>
 
             <div class="grid-item LIFE">
-                <a data-fancybox="gallery" />
-                <img
-                    src="static/pic/006-GLFIdf.jpg">
-                <div class="item-info" onClick="return false;">
+                <a data-fancybox="gallery" href="static/pic/006-GLFIdf.jpg">
+                <img src="static/pic/006-GLFIdf.jpg">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         日 落 时 分</div>
@@ -182,10 +182,9 @@
                 </a>
             </div>
             <div class="grid-item SCENE">
-                <a data-fancybox="gallery" />
-                <img
-                    src="http://imgoss.cnu.cc/2201/02/eayt9vvk0wzl6ix2zm91641099726140.jpg?x-oss-process=style/content">
-                <div class="item-info" onClick="return false;">
+                <a data-fancybox="gallery" href="http://imgoss.cnu.cc/2201/02/eayt9vvk0wzl6ix2zm91641099726140.jpg?x-oss-process=style/content">
+                <img src="http://imgoss.cnu.cc/2201/02/eayt9vvk0wzl6ix2zm91641099726140.jpg?x-oss-process=style/content">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         北 锣 鼓 巷</div>
@@ -193,10 +192,9 @@
                 </a>
             </div>
             <div class="grid-item SCENE">
-                <a data-fancybox="gallery" />
-                <img
-                    src="static/pic/007-GLFfsI.jpg">
-                <div class="item-info" onClick="return false;">
+                <a data-fancybox="gallery" href="static/pic/007-GLFfsI.jpg">
+                <img src="static/pic/007-GLFfsI.jpg">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         海 鸥 沙 滩</div>
@@ -205,10 +203,9 @@
             </div>
 
             <div class="grid-item LIFE">
-                <a data-fancybox="gallery" />
-                <img
-                    src="static/pic/008-JuSB9K.jpg">
-                <div class="item-info" onClick="return false;">
+                <a data-fancybox="gallery" href="static/pic/008-JuSB9K.jpg">
+                <img src="static/pic/008-JuSB9K.jpg">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         葡 萄 树 下</div>
@@ -216,10 +213,9 @@
                 </a>
             </div>
             <div class="grid-item LIFE">
-                <a data-fancybox="gallery" />
-                <img
-                    src="static/pic/009-GLkH76.jpg">
-                <div class="item-info" onClick="return false;">
+                <a data-fancybox="gallery" href="static/pic/009-GLkH76.jpg">
+                <img src="static/pic/009-GLkH76.jpg">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         负 重 前 行</div>
@@ -227,10 +223,9 @@
                 </a>
             </div>
             <div class="grid-item FOOD">
-                <a data-fancybox="gallery" />
-                <img
-                    src="static/pic/010-e3b792f0a088e22d.jpeg">
-                <div class="item-info" onClick="return false;">
+                <a data-fancybox="gallery" href="static/pic/010-e3b792f0a088e22d.jpeg">
+                <img src="static/pic/010-e3b792f0a088e22d.jpeg">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         麦 旋 风🍦</div>
@@ -238,10 +233,9 @@
                 </a>
             </div>
             <div class="grid-item LIFE">
-                <a data-fancybox="gallery" />
-                <img
-                    src="static/pic/011-GLkqAK.jpg">
-                <div class="item-info" onClick="return false;">
+                <a data-fancybox="gallery" href="static/pic/011-GLkqAK.jpg">
+                <img src="static/pic/011-GLkqAK.jpg">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         南 以 离 开</div>
@@ -249,10 +243,9 @@
                 </a>
             </div>
             <div class="grid-item FOOD">
-                <a data-fancybox="gallery" />
-                <img
-                    src="static/pic/012-12b2b9fa14b6bafb.jpeg">
-                <div class="item-info" onClick="return false;">
+                <a data-fancybox="gallery" href="static/pic/012-12b2b9fa14b6bafb.jpeg">
+                <img src="static/pic/012-12b2b9fa14b6bafb.jpeg">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         西 冷 牛 排</div>
@@ -260,10 +253,9 @@
                 </a>
             </div>
             <div class="grid-item SCENE">
-                <a data-fancybox="gallery" />
-                <img
-                    src="static/pic/013-THon0O.jpg">
-                <div class="item-info" onClick="return false;">
+                <a data-fancybox="gallery" href="static/pic/013-THon0O.jpg">
+                <img src="static/pic/013-THon0O.jpg">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         芦 苇 荡 漾</div>
@@ -274,7 +266,7 @@
                 <a data-fancybox="gallery" />
                 <img
                     src="static/pic/014-THoMAe.jpg">
-                <div class="item-info" onClick="return false;">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         树 影 婆 娑</div>
@@ -285,7 +277,7 @@
                 <a data-fancybox="gallery" />
                 <img
                     src="static/pic/015-THI0Qx.jpg">
-                <div class="item-info" onClick="return false;">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         叶 落 光 隙</div>
@@ -296,7 +288,7 @@
                 <a data-fancybox="gallery" />
                 <img
                     src="static/pic/016-THINFJ.jpg">
-                <div class="item-info" onClick="return false;">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         禁 止 通 行</div>
@@ -307,7 +299,7 @@
                 <a data-fancybox="gallery" />
                 <img
                     src="static/pic/017-THI1yV.jpg">
-                <div class="item-info" onClick="return false;">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         自 在 生 长</div>
@@ -318,7 +310,7 @@
                 <a data-fancybox="gallery" />
                 <img
                     src="static/pic/018-THIKWn.jpg">
-                <div class="item-info" onClick="return false;">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         对 长 亭 晚</div>
@@ -329,7 +321,7 @@
                 <a data-fancybox="gallery" />
                 <img
                     src="static/pic/019-THIZdg.jpg">
-                <div class="item-info" onClick="return false;">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         冬 日 暖 阳</div>
@@ -340,7 +332,7 @@
                 <a data-fancybox="gallery" />
                 <img
                     src="static/pic/020-673d87d19f5ca313.jpeg">
-                <div class="item-info" onClick="return false;">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                        夏 日 青 果</div>
@@ -351,7 +343,7 @@
                 <a data-fancybox="gallery" />
                 <img
                     src="static/pic/021-THIuJs.jpg">
-                <div class="item-info" onClick="return false;">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         清 冷 孤 寂</div>
@@ -362,7 +354,7 @@
                 <a data-fancybox="gallery" />
                 <img
                     src="static/pic/022-THIeoQ.jpg">
-                <div class="item-info" onClick="return false;">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         I love pizza🍕</div>
@@ -373,7 +365,7 @@
                 <a data-fancybox="gallery" />
                 <img
                     src="static/pic/023-THIlQ0.jpg">
-                <div class="item-info" onClick="return false;">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         单 向 空 间</div>
@@ -384,7 +376,7 @@
                 <a data-fancybox="gallery" />
                 <img
                     src="static/pic/024-THIYo4.jpg">
-                <div class="item-info" onClick="return false;">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         电 子 唱 片</div>
@@ -395,7 +387,7 @@
                 <a data-fancybox="gallery" />
                 <img
                     src="static/pic/025-THou7D.jpg">
-                <div class="item-info" onClick="return false;">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         PAGE ONE</div>
@@ -406,7 +398,7 @@
                 <a data-fancybox="gallery" />
                 <img
                     src="static/pic/026-THzVgS.jpg">
-                <div class="item-info" onClick="return false;">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         基 本 问 题</div>
@@ -417,7 +409,7 @@
                 <a data-fancybox="gallery" />
                 <img
                     src="static/pic/027-08a77972ab9f960d.jpeg">
-                <div class="item-info" onClick="return false;">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         吮 指 鸡🍗</div>
@@ -428,7 +420,7 @@
                 <a data-fancybox="gallery" />
                 <img
                     src="static/pic/028-THzA9f.jpg">
-                <div class="item-info" onClick="return false;">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         只 差 灵 感</div>
@@ -439,7 +431,7 @@
                 <a data-fancybox="gallery" />
                 <img
                     src="static/pic/029-TbSveH.jpg">
-                <div class="item-info" onClick="return false;">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         书 房 的 猫</div>
@@ -450,7 +442,7 @@
                 <a data-fancybox="gallery" />
                 <img
                     src="static/pic/030-b0e70a8ae7f62a3c.jpeg">
-                <div class="item-info" onClick="return false;">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         Coffee☕️</div>
@@ -461,7 +453,7 @@
                 <a data-fancybox="gallery" />
                 <img
                     src="static/pic/031-TbSLQO.jpg">
-                <div class="item-info" onClick="return false;">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         湛 泉 如 许</div>
@@ -472,7 +464,7 @@
                 <a data-fancybox="gallery" />
                 <img
                     src="static/pic/032-TbSqSK.jpg">
-                <div class="item-info" onClick="return false;">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         亭 台 楼 榭</div>
@@ -483,7 +475,7 @@
                 <a data-fancybox="gallery" />
                 <img
                     src="static/pic/033-TbSxwd.jpg">
-                <div class="item-info" onClick="return false;">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         易 安 旧 居</div>
@@ -494,7 +486,7 @@
                 <a data-fancybox="gallery" />
                 <img
                     src="static/pic/034-TbPk6K.jpg">
-                <div class="item-info" onClick="return false;">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         煎 饼 果 子</div>
@@ -505,7 +497,7 @@
                 <a data-fancybox="gallery" />
                 <img
                     src="static/pic/035-TbPiSx.jpg">
-                <div class="item-info" onClick="return false;">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         山 雨 欲 来</div>
@@ -516,7 +508,7 @@
                 <a data-fancybox="gallery" />
                 <img
                     src="static/pic/036-3e93449da3b4b79e.jpg">
-                <div class="item-info" onClick="return false;">
+                <div class="item-info">
                     <div class="title"
                         style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
                         橘 色 云 朵</div>
