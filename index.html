@@ -1,567 +1,523 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="zh-CN">
-<script src="static/js/jquery.min.js"></script>
-<link rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.2/jquery.fancybox.min.css">
-<script src="https://cdn.staticfile.org/fancybox/3.5.2/jquery.fancybox.min.js"></script>
-<script src="static/js/stats.js"></script>
-<script src="static/js/lazyload.js"></script>
-<script src="static/js/modal.js"></script>
+  <script src="static/js/jquery.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/fancybox/3.5.2/jquery.fancybox.min.css"
+  />
+  <script src="https://cdn.staticfile.org/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+  <script src="static/js/stats.js"></script>
+  <script src="static/js/lazyload.js"></script>
+  <script src="static/js/modal.js"></script>
 
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-    <meta name="renderer" content="webkit">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./static/css/modal.css">
-    <link type="image/vnd.microsoft.icon" href="" rel="shortcut icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./static/css/modal.css" />
+    <link type="image/vnd.microsoft.icon" href="" rel="shortcut icon" />
     <title>插画摄影｜析构理想</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <header>
-        <div class="header-top">
-            <div class="logo">
-                <a href="https://idealdestructor.github.io/art">
-                    <img src="static/img/logo.png" alt="">
-                    <div class="site-name"><a>Illustration & Photography</a></div>
+      <div class="header-top">
+        <div class="logo">
+          <a href="https://idealdestructor.github.io/art">
+            <img src="static/img/logo.png" alt="" />
+            <div class="site-name"><a>Illustration & Photography</a></div>
+          </a>
+        </div>
+        <div class="nav">
+          <ul>
+            <a class="subnav-item" href="https://idealdestructor.github.io">
+              <li class="subnav-li">HOME</li>
+            </a>
+          </ul>
+
+          <ul class="socials">
+            <div class="slide"></div>
+            <li>
+              <a href="http://www.cnu.cc/users/306801" target="_blank">
+                <img class="social-icon" src="static/img/cnu.svg" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.artstation.com/idealdestructor"
+                target="_blank"
+              >
+                <img class="social-icon" src="static/img/artstation.svg" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.douban.com/people/IdealDestructor/"
+                target="_blank"
+              >
+                <img class="social-icon" src="static/img/douban.svg" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="categories-container">
+          <div class="categories">
+            <ul class="categories-list">
+              <li>
+                <a href="">
+                  <div class="categories-single">Archieves</div>
                 </a>
-            </div>
-            <div class="nav">
-                <ul>
-                    <a class="subnav-item" href="https://idealdestructor.github.io">
-                        <li class="subnav-li">HOME</li>
-                    </a>
-                </ul>
+              </li>
 
-                <ul class="socials">
-                    <div class="slide"></div>
-                    <li>
-                        <a href="http://www.cnu.cc/users/306801" target="_blank">
-                            <img class="social-icon" src="static/img/cnu.svg">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.artstation.com/idealdestructor" target="_blank">
-                            <img class="social-icon" src="static/img/artstation.svg">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.douban.com/people/IdealDestructor/" target="_blank">
-                            <img class="social-icon" src="static/img/douban.svg">
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
+              <li class="slide"></li>
+              <li>
+                <a onClick="changetab('ALL')" title="全部">
+                  <div class="categories-single category-current" id="ALL">
+                    ALL
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a onClick="changetab('LIFE')" title="生活">
+                  <div class="categories-single" id="LIFE">LIFE</div>
+                </a>
+              </li>
+              <li>
+                <a onClick="changetab('SCENE')" title="风景">
+                  <div class="categories-single" id="SCENE">SCENE</div>
+                </a>
+              </li>
+              <li>
+                <a onClick="changetab('MUSEUM')" title="展馆">
+                  <div class="categories-single" id="MUSEUM">MUSEUM</div>
+                </a>
+              </li>
+              <li>
+                <a onClick="changetab('FOOD')" title="美食">
+                  <div class="categories-single" id="FOOD">FOOD</div>
+                </a>
+              </li>
+              <li>
+                <a onClick="changetab('ILLUSTRATION')" title="插画">
+                  <div class="categories-single" id="ILLUSTRATION">
+                    ILLUSTRATION
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="header-bottom">
-            <div class="categories-container">
-                <div class="categories">
-
-                    <ul class="categories-list">
-                        <li><a href="">
-                                <div class="categories-single">Archieves</div>
-                            </a></li>
-
-                        <li class="slide"></li>
-                        <li>
-                            <a onClick="changetab('ALL')"
-                                title="全部">
-                                <div class="categories-single category-current" id="ALL">
-                                    ALL
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a onClick="changetab('LIFE')"
-                                title="生活">
-                                <div class="categories-single" id="LIFE">
-                                    LIFE
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a onClick="changetab('SCENE')"
-                                title="风景">
-                                <div class="categories-single" id="SCENE">
-                                    SCENE
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a onClick="changetab('MUSEUM')"
-                                title="展馆">
-                                <div class="categories-single" id="MUSEUM">
-                                    MUSEUM
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a onClick="changetab('FOOD')"
-                                title="美食">
-                                <div class="categories-single" id="FOOD">
-                                    FOOD
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a onClick="changetab('ILLUSTRATION')"
-                                title="插画">
-                                <div class="categories-single" id="ILLUSTRATION">
-                                    ILLUSTRATION
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+      </div>
     </header>
     <div class="container">
-        <div class="banner" style="height:600px;background: url(static/pic/004-THIJwF.jpg)">
-            <div class="banner-content">
-                <div class="banner-heading">析构理想</div>
-                <div class="banner-description">It's goodbye, but we lean forward to the next crazy venture beneath the skies.</div>
+      <div
+        class="banner"
+        style="height: 600px; background: url(static/pic/004-THIJwF.jpg)"
+      >
+        <div class="banner-content">
+          <div class="banner-heading">析构理想</div>
+          <div class="banner-description">
+            It's goodbye, but we lean forward to the next crazy venture beneath
+            the skies.
+          </div>
 
-                <div class="site-data">
-                    <div class="banner-column banner-column-left">100<p>Pictures</p>
-                    </div>
-                    <div class="banner-column banner-column-center">6<p>Categories</p>
-                    </div>
-                    <div class="banner-column banner-column-right">25<p>Locations</p>
-                    </div>
-                </div>
+          <div class="site-data">
+            <div class="banner-column banner-column-left">
+              100
+              <p>Pictures</p>
             </div>
-            <div class="banner-info">
-                <div class="week" style="">c o p y r i g h t © I d e a l d e s t r u c t o r </div>
+            <div class="banner-column banner-column-center">
+              6
+              <p>Categories</p>
             </div>
+            <div class="banner-column banner-column-right">
+              25
+              <p>Locations</p>
+            </div>
+          </div>
         </div>
-        
-        <div class="articles" id="grid">
-            <div class="grid-item SCENE">
-                <a data-fancybox="gallery" href="static/pic/005-GLF7FS.jpg">
-                <img src="static/pic/005-GLF7FS.jpg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        暮 秋 晨 光</div>
-                </div>
-                </a>
-            </div>
-            <div class="grid-item SCENE">
-                <a data-fancybox="gallery" href="static/pic/003-g8q58b8l3ckqdfigula1641099726140.jpg">
-                <img src="static/pic/003-g8q58b8l3ckqdfigula1641099726140.jpg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        夜 色 温 柔</div>
-                </div>
-                </a>
-            </div>
-            <div class="grid-item SCENE" data-location="北京后海">  
-                <a data-fancybox="gallery" href="static/pic/004-ghvjs3bdlw8tuwtmovd1641099726140.jpg">
-                <img src="static/pic/004-ghvjs3bdlw8tuwtmovd1641099726140.jpg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        后 海 重 逢</div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="grid-item LIFE">
-                <a data-fancybox="gallery" href="static/pic/006-GLFIdf.jpg">
-                <img src="static/pic/006-GLFIdf.jpg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        日 落 时 分</div>
-                    </div>
-                </a>
-            </div>
-            <div class="grid-item SCENE">
-                <a data-fancybox="gallery" href="static/pic/eayt9vvk0wzl6ix2zm91641099726140.jpg">
-                <img src="static/pic/eayt9vvk0wzl6ix2zm91641099726140.jpg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        北 锣 鼓 巷</div>
-                    </div>
-                </a>
-            </div>
-            <div class="grid-item SCENE">
-                <a data-fancybox="gallery" href="static/pic/007-GLFfsI.jpg">
-                <img src="static/pic/007-GLFfsI.jpg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        海 鸥 沙 滩</div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="grid-item LIFE">
-                <a data-fancybox="gallery" href="static/pic/008-JuSB9K.jpg">
-                <img src="static/pic/008-JuSB9K.jpg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        葡 萄 树 下</div>
-                    </div>
-                </a>
-            </div>
-            <div class="grid-item LIFE">
-                <a data-fancybox="gallery" href="static/pic/009-GLkH76.jpg">
-                <img src="static/pic/009-GLkH76.jpg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        负 重 前 行</div>
-                    </div>
-                </a>
-            </div>
-            <div class="grid-item FOOD" data-location="麦当劳">  
-                <a data-fancybox="gallery" href="static/pic/010-e3b792f0a088e22d.jpeg">
-                <img src="static/pic/010-e3b792f0a088e22d.jpeg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        麦 旋 风🍦</div>
-                    </div>
-                </a>
-            </div>
-            <div class="grid-item LIFE">
-                <a data-fancybox="gallery" href="static/pic/011-GLkqAK.jpg">
-                <img src="static/pic/011-GLkqAK.jpg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        南 以 离 开</div>
-                    </div>
-                </a>
-            </div>
-            <div class="grid-item FOOD">
-                <a data-fancybox="gallery" href="static/pic/012-12b2b9fa14b6bafb.jpeg">
-                <img src="static/pic/012-12b2b9fa14b6bafb.jpeg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        西 冷 牛 排</div>
-                    </div>
-                </a>
-            </div>
-            <div class="grid-item SCENE">
-                <a data-fancybox="gallery" href="static/pic/013-THon0O.jpg">
-                <img src="static/pic/013-THon0O.jpg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        芦 苇 荡 漾</div>
-                    </div>
-                </a>
-            </div>
-            <div class="grid-item SCENE">
-                <a data-fancybox="gallery" />
-                <img
-                    src="static/pic/014-THoMAe.jpg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        树 影 婆 娑</div>
-                    </div>
-                </a>
-            </div>
-            <div class="grid-item LIFE">
-                <a data-fancybox="gallery" />
-                <img
-                    src="static/pic/015-THI0Qx.jpg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        叶 落 光 隙</div>
-                    </div>
-                </a>
-            </div>
-            <div class="grid-item LIFE">
-                <a data-fancybox="gallery" />
-                <img
-                    src="static/pic/016-THINFJ.jpg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        禁 止 通 行</div>
-                    </div>
-                </a>
-            </div>
-            <div class="grid-item SCENE">
-                <a data-fancybox="gallery" />
-                <img
-                    src="static/pic/017-THI1yV.jpg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        自 在 生 长</div>
-                    </div>
-                </a>
-            </div>
-            <div class="grid-item SCENE">
-                <a data-fancybox="gallery" />
-                <img
-                    src="static/pic/018-THIKWn.jpg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        对 长 亭 晚</div>
-                </div>
-                </a>
-            </div>
-            <div class="grid-item SCENE">
-                <a data-fancybox="gallery" />
-                <img
-                    src="static/pic/019-THIZdg.jpg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        冬 日 暖 阳</div>
-                </div>
-                </a>
-            </div>
-            <div class="grid-item FOOD">
-                <a data-fancybox="gallery" />
-                <img
-                    src="static/pic/020-673d87d19f5ca313.jpeg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                       夏 日 青 果</div>
-                </div>
-                </a>
-            </div>
-            <div class="grid-item SCENE">
-                <a data-fancybox="gallery" />
-                <img
-                    src="static/pic/021-THIuJs.jpg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        清 冷 孤 寂</div>
-                </div>
-                </a>
-            </div>
-            <div class="grid-item FOOD" data-location="意大利餐厅">  
-                <a data-fancybox="gallery" href="static/pic/022-THIeoQ.jpg">
-                <img src="static/pic/022-THIeoQ.jpg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        I love pizza🍕</div>
-                </div>
-                </a>
-            </div>
-            <div class="grid-item MUSEUM" data-location="北京大望路">  
-                <a data-fancybox="gallery" href="static/pic/023-THIlQ0.jpg">
-                <img src="static/pic/023-THIlQ0.jpg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        单 向 空 间</div>
-                </div>
-                </a>
-            </div>
-            <div class="grid-item MUSEUM" data-location="北京市独音唱片">  
-                <a data-fancybox="gallery" href="static/pic/024-THIYo4.jpg">
-                <img src="static/pic/024-THIYo4.jpg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        独 音 唱 片</div>
-                </div>
-                </a>
-            </div>
-            <div class="grid-item MUSEUM" data-location="PAGE ONE书店">  
-                <a data-fancybox="gallery" href="static/pic/025-THou7D.jpg">
-                <img src="static/pic/025-THou7D.jpg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        PAGE ONE</div>
-                </div>
-                </a>
-            </div>
-            <div class="grid-item LIFE">
-                <a data-fancybox="gallery" />
-                <img
-                    src="static/pic/026-THzVgS.jpg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        基 本 问 题</div>
-                </div>
-                </a>
-            </div>
-            <div class="grid-item FOOD">
-                <a data-fancybox="gallery" />
-                <img
-                    src="static/pic/027-08a77972ab9f960d.jpeg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        吮 指 鸡🍗</div>
-                </div>
-                </a>
-            </div>
-            <div class="grid-item LIFE">
-                <a data-fancybox="gallery" />
-                <img
-                    src="static/pic/028-THzA9f.jpg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        只 差 灵 感</div>
-                </div>
-                </a>
-            </div>
-            <div class="grid-item MUSEUM">
-                <a data-fancybox="gallery" />
-                <img
-                    src="static/pic/029-TbSveH.jpg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        书 房 的 猫</div>
-                </div>
-                </a>
-            </div>
-            <div class="grid-item FOOD">
-                <a data-fancybox="gallery" />
-                <img
-                    src="static/pic/030-b0e70a8ae7f62a3c.jpeg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        Coffee☕️</div>
-                </div>
-                </a>
-            </div>
-            <div class="grid-item SCENE">
-                <a data-fancybox="gallery" />
-                <img
-                    src="static/pic/031-TbSLQO.jpg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        湛 泉 如 许</div>
-                </div>
-                </a>
-            </div>
-            <div class="grid-item SCENE">
-                <a data-fancybox="gallery" />
-                <img
-                    src="static/pic/032-TbSqSK.jpg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        亭 台 楼 榭</div>
-                </div>
-                </a>
-            </div>
-            <div class="grid-item SCENE">
-                <a data-fancybox="gallery" />
-                <img
-                    src="static/pic/033-TbSxwd.jpg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        易 安 旧 居</div>
-                </div>
-                </a>
-            </div>
-            <div class="grid-item FOOD">
-                <a data-fancybox="gallery" />
-                <img
-                    src="static/pic/034-TbPk6K.jpg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        煎 饼 果 子</div>
-                </div>
-                </a>
-            </div>
-            <div class="grid-item SCENE">
-                <a data-fancybox="gallery" />
-                <img
-                    src="static/pic/035-TbPiSx.jpg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        山 雨 欲 来</div>
-                </div>
-                </a>
-            </div>
-            <div class="grid-item SCENE">
-                <a data-fancybox="gallery" />
-                <img
-                    src="static/pic/036-3e93449da3b4b79e.jpg">
-                <div class="item-info">
-                    <div class="title"
-                        style="color: #fff;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center">
-                        橘 色 云 朵</div>
-                </div>
-                </a>
-            </div>
-            
+        <div class="banner-info">
+          <div class="week">
+            c o p y r i g h t © I d e a l d e s t r u c t o r
+          </div>
         </div>
-        <script src="static/js/grids.js"></script>
+      </div>
 
-        <script>
-            var macy = Macy({
-                container: '#grid',
-                trueOrder: false,
-                waitForImages: false,
-                margin: 20,
-                columns: 4,
-                breakAt: {
-                    920: 3,
-                    620: 2,
-                    480: 1
-                }
-            });
-            var changetab = function(type) {
-                var tabs = document.getElementsByClassName('category-current'); 
-                tabs[0].className='categories-single';
-                var nowtab = document.getElementById(type);
-                nowtab.className="categories-single category-current" ;
-                if(type=='ALL'){
-                    var divs = document.getElementsByClassName('grid-item');for(var j=0; j<divs.length; j++){divs[j].style.display='block'}
-                }else{
-                var divs = document.getElementsByClassName('grid-item');for(var j=0; j<divs.length; j++){divs[j].style.display='none'}
-                var nowdivs = document.getElementsByClassName(type);
-                for(var i=0; i<nowdivs.length; i++){
-                    nowdivs[i].style.display="block";
-                }}
-                var myEvent = new Event('resize');
-                window.dispatchEvent(myEvent)
+      <div class="articles" id="grid">
+        <div class="grid-item SCENE">
+          <a data-fancybox="gallery" href="static/pic/005-GLF7FS.jpg">
+            <img src="static/pic/005-GLF7FS.jpg" />
+            <div class="item-info">
+              <div class="title">暮 秋 晨 光</div>
+            </div>
+          </a>
+        </div>
+        <div class="grid-item SCENE">
+          <a
+            data-fancybox="gallery"
+            href="static/pic/003-g8q58b8l3ckqdfigula1641099726140.jpg"
+          >
+            <img src="static/pic/003-g8q58b8l3ckqdfigula1641099726140.jpg" />
+            <div class="item-info">
+              <div class="title">夜 色 温 柔</div>
+            </div>
+          </a>
+        </div>
+        <div class="grid-item SCENE" data-location="北京后海">
+          <a
+            data-fancybox="gallery"
+            href="static/pic/004-ghvjs3bdlw8tuwtmovd1641099726140.jpg"
+          >
+            <img src="static/pic/004-ghvjs3bdlw8tuwtmovd1641099726140.jpg" />
+            <div class="item-info">
+              <div class="title">后 海 重 逢</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="grid-item LIFE">
+          <a data-fancybox="gallery" href="static/pic/006-GLFIdf.jpg">
+            <img src="static/pic/006-GLFIdf.jpg" />
+            <div class="item-info">
+              <div class="title">日 落 时 分</div>
+            </div>
+          </a>
+        </div>
+        <div class="grid-item SCENE">
+          <a
+            data-fancybox="gallery"
+            href="static/pic/eayt9vvk0wzl6ix2zm91641099726140.jpg"
+          >
+            <img src="static/pic/eayt9vvk0wzl6ix2zm91641099726140.jpg" />
+            <div class="item-info">
+              <div class="title">北 锣 鼓 巷</div>
+            </div>
+          </a>
+        </div>
+        <div class="grid-item SCENE">
+          <a data-fancybox="gallery" href="static/pic/007-GLFfsI.jpg">
+            <img src="static/pic/007-GLFfsI.jpg" />
+            <div class="item-info">
+              <div class="title">海 鸥 沙 滩</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="grid-item LIFE">
+          <a data-fancybox="gallery" href="static/pic/008-JuSB9K.jpg">
+            <img src="static/pic/008-JuSB9K.jpg" />
+            <div class="item-info">
+              <div class="title">葡 萄 树 下</div>
+            </div>
+          </a>
+        </div>
+        <div class="grid-item LIFE">
+          <a data-fancybox="gallery" href="static/pic/009-GLkH76.jpg">
+            <img src="static/pic/009-GLkH76.jpg" />
+            <div class="item-info">
+              <div class="title">负 重 前 行</div>
+            </div>
+          </a>
+        </div>
+        <div class="grid-item FOOD" data-location="麦当劳">
+          <a
+            data-fancybox="gallery"
+            href="static/pic/010-e3b792f0a088e22d.jpeg"
+          >
+            <img src="static/pic/010-e3b792f0a088e22d.jpeg" />
+            <div class="item-info">
+              <div class="title">麦 旋 风🍦</div>
+            </div>
+          </a>
+        </div>
+        <div class="grid-item LIFE">
+          <a data-fancybox="gallery" href="static/pic/011-GLkqAK.jpg">
+            <img src="static/pic/011-GLkqAK.jpg" />
+            <div class="item-info">
+              <div class="title">南 以 离 开</div>
+            </div>
+          </a>
+        </div>
+        <div class="grid-item FOOD">
+          <a
+            data-fancybox="gallery"
+            href="static/pic/012-12b2b9fa14b6bafb.jpeg"
+          >
+            <img src="static/pic/012-12b2b9fa14b6bafb.jpeg" />
+            <div class="item-info">
+              <div class="title">西 冷 牛 排</div>
+            </div>
+          </a>
+        </div>
+        <div class="grid-item SCENE">
+          <a data-fancybox="gallery" href="static/pic/013-THon0O.jpg">
+            <img src="static/pic/013-THon0O.jpg" />
+            <div class="item-info">
+              <div class="title">芦 苇 荡 漾</div>
+            </div>
+          </a>
+        </div>
+        <div class="grid-item SCENE">
+          <a data-fancybox="gallery" href="static/pic/014-THoMAe.jpg">
+            <img src="static/pic/014-THoMAe.jpg" />
+            <div class="item-info">
+              <div class="title">树 影 婆 娑</div>
+            </div>
+          </a>
+        </div>
+        <div class="grid-item LIFE">
+          <a data-fancybox="gallery" href="static/pic/015-THI0Qx.jpg">
+            <img src="static/pic/015-THI0Qx.jpg" />
+            <div class="item-info">
+              <div class="title">叶 落 光 隙</div>
+            </div>
+          </a>
+        </div>
+        <div class="grid-item LIFE">
+          <a data-fancybox="gallery" href="static/pic/016-THINFJ.jpg">
+            <img src="static/pic/016-THINFJ.jpg" />
+            <div class="item-info">
+              <div class="title">禁 止 通 行</div>
+            </div>
+          </a>
+        </div>
+        <div class="grid-item SCENE">
+          <a data-fancybox="gallery" href="static/pic/017-THI1yV.jpg">
+            <img src="static/pic/017-THI1yV.jpg" />
+            <div class="item-info">
+              <div class="title">自 在 生 长</div>
+            </div>
+          </a>
+        </div>
+        <div class="grid-item SCENE">
+          <a data-fancybox="gallery" href="static/pic/018-THIKWn.jpg">
+            <img src="static/pic/018-THIKWn.jpg" />
+            <div class="item-info">
+              <div class="title">对 长 亭 晚</div>
+            </div>
+          </a>
+        </div>
+        <div class="grid-item SCENE">
+          <a data-fancybox="gallery" href="static/pic/019-THIZdg.jpg">
+            <img src="static/pic/019-THIZdg.jpg" />
+            <div class="item-info">
+              <div class="title">冬 日 暖 阳</div>
+            </div>
+          </a>
+        </div>
+        <div class="grid-item FOOD">
+          <a
+            data-fancybox="gallery"
+            href="static/pic/020-673d87d19f5ca313.jpeg"
+          >
+            <img src="static/pic/020-673d87d19f5ca313.jpeg" />
+            <div class="item-info">
+              <div class="title">夏 日 青 果</div>
+            </div>
+          </a>
+        </div>
+        <div class="grid-item SCENE">
+          <a data-fancybox="gallery" href="static/pic/021-THIuJs.jpg">
+            <img src="static/pic/021-THIuJs.jpg" />
+            <div class="item-info">
+              <div class="title">清 冷 孤 寂</div>
+            </div>
+          </a>
+        </div>
+        <div class="grid-item FOOD" data-location="意大利餐厅">
+          <a data-fancybox="gallery" href="static/pic/022-THIeoQ.jpg">
+            <img src="static/pic/022-THIeoQ.jpg" />
+            <div class="item-info">
+              <div class="title">I love pizza🍕</div>
+            </div>
+          </a>
+        </div>
+        <div class="grid-item MUSEUM" data-location="北京大望路">
+          <a data-fancybox="gallery" href="static/pic/023-THIlQ0.jpg">
+            <img src="static/pic/023-THIlQ0.jpg" />
+            <div class="item-info">
+              <div class="title">单 向 空 间</div>
+            </div>
+          </a>
+        </div>
+        <div class="grid-item MUSEUM" data-location="北京市独音唱片">
+          <a data-fancybox="gallery" href="static/pic/024-THIYo4.jpg">
+            <img src="static/pic/024-THIYo4.jpg" />
+            <div class="item-info">
+              <div class="title">独 音 唱 片</div>
+            </div>
+          </a>
+        </div>
+        <div class="grid-item MUSEUM" data-location="PAGE ONE书店">
+          <a data-fancybox="gallery" href="static/pic/025-THou7D.jpg">
+            <img src="static/pic/025-THou7D.jpg" />
+            <div class="item-info">
+              <div class="title">PAGE ONE</div>
+            </div>
+          </a>
+        </div>
+        <div class="grid-item LIFE">
+          <a data-fancybox="gallery" href="static/pic/026-THzVgS.jpg">
+            <img src="static/pic/026-THzVgS.jpg" />
+            <div class="item-info">
+              <div class="title">基 本 问 题</div>
+            </div>
+          </a>
+        </div>
+        <div class="grid-item FOOD">
+          <a
+            data-fancybox="gallery"
+            href="static/pic/027-08a77972ab9f960d.jpeg"
+          >
+            <img src="static/pic/027-08a77972ab9f960d.jpeg" />
+            <div class="item-info">
+              <div class="title">吮 指 鸡🍗</div>
+            </div>
+          </a>
+        </div>
+        <div class="grid-item LIFE">
+          <a data-fancybox="gallery" href="static/pic/028-THzA9f.jpg">
+            <img src="static/pic/028-THzA9f.jpg" />
+            <div class="item-info">
+              <div class="title">只 差 灵 感</div>
+            </div>
+          </a>
+        </div>
+        <div class="grid-item MUSEUM">
+          <a data-fancybox="gallery" href="static/pic/029-TbSveH.jpg">
+            <img src="static/pic/029-TbSveH.jpg" />
+            <div class="item-info">
+              <div class="title">书 房 的 猫</div>
+            </div>
+          </a>
+        </div>
+        <div class="grid-item FOOD">
+          <a
+            data-fancybox="gallery"
+            href="static/pic/030-b0e70a8ae7f62a3c.jpeg"
+          >
+            <img src="static/pic/030-b0e70a8ae7f62a3c.jpeg" />
+            <div class="item-info">
+              <div class="title">Coffee☕️</div>
+            </div>
+          </a>
+        </div>
+        <div class="grid-item SCENE">
+          <a data-fancybox="gallery" href="static/pic/031-TbSLQO.jpg">
+            <img src="static/pic/031-TbSLQO.jpg" />
+            <div class="item-info">
+              <div class="title">湛 泉 如 许</div>
+            </div>
+          </a>
+        </div>
+        <div class="grid-item SCENE">
+          <a data-fancybox="gallery" href="static/pic/032-TbSqSK.jpg">
+            <img src="static/pic/032-TbSqSK.jpg" />
+            <div class="item-info">
+              <div class="title">亭 台 楼 榭</div>
+            </div>
+          </a>
+        </div>
+        <div class="grid-item SCENE">
+          <a data-fancybox="gallery" href="static/pic/033-TbSxwd.jpg">
+            <img src="static/pic/033-TbSxwd.jpg" />
+            <div class="item-info">
+              <div class="title">易 安 旧 居</div>
+            </div>
+          </a>
+        </div>
+        <div class="grid-item FOOD">
+          <a data-fancybox="gallery" href="static/pic/034-TbPk6K.jpg">
+            <img src="static/pic/034-TbPk6K.jpg" />
+            <div class="item-info">
+              <div class="title">煎 饼 果 子</div>
+            </div>
+          </a>
+        </div>
+        <div class="grid-item SCENE">
+          <a data-fancybox="gallery" href="static/pic/035-TbPiSx.jpg">
+            <img src="static/pic/035-TbPiSx.jpg" />
+            <div class="item-info">
+              <div class="title">山 雨 欲 来</div>
+            </div>
+          </a>
+        </div>
+        <div class="grid-item SCENE">
+          <a data-fancybox="gallery" href="static/pic/036-3e93449da3b4b79e.jpg">
+            <img src="static/pic/036-3e93449da3b4b79e.jpg" />
+            <div class="item-info">
+              <div class="title">橘 色 云 朵</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <script src="static/js/grids.js"></script>
+
+      <script>
+        var macy = Macy({
+          container: "#grid",
+          trueOrder: false,
+          waitForImages: false,
+          margin: 20,
+          columns: 4,
+          breakAt: {
+            920: 3,
+            620: 2,
+            480: 1,
+          },
+        });
+        var changetab = function (type) {
+          var tabs = document.getElementsByClassName("category-current");
+          tabs[0].className = "categories-single";
+          var nowtab = document.getElementById(type);
+          nowtab.className = "categories-single category-current";
+          if (type == "ALL") {
+            var divs = document.getElementsByClassName("grid-item");
+            for (var j = 0; j < divs.length; j++) {
+              divs[j].style.display = "block";
             }
-        </script>
+          } else {
+            var divs = document.getElementsByClassName("grid-item");
+            for (var j = 0; j < divs.length; j++) {
+              divs[j].style.display = "none";
+            }
+            var nowdivs = document.getElementsByClassName(type);
+            for (var i = 0; i < nowdivs.length; i++) {
+              nowdivs[i].style.display = "block";
+            }
+          }
+          var myEvent = new Event("resize");
+          window.dispatchEvent(myEvent);
+        };
+      </script>
     </div>
     <footer>
-        <div class="copyright" style="text-align:center">
-            Copyright ©2025 <a href="http://idealdestructor.github.io/" target="_blank">析构理想</a> All rights reserved</div>
+      <div class="copyright" style="text-align: center">
+        Copyright ©2025
+        <a href="http://idealdestructor.github.io/" target="_blank">析构理想</a>
+        All rights reserved
+      </div>
     </footer>
     <script type="text/javascript">
-        let interval = window.setInterval(function () {
-            $(".fancybox").fancybox();
-        },1000);
-        $(document).ready(function () {
-            $(".fancybox").fancybox();
-            clearInterval(interval);
-        });
+      let interval = window.setInterval(function () {
+        $(".fancybox").fancybox();
+      }, 1000);
+      $(document).ready(function () {
+        $(".fancybox").fancybox();
+        clearInterval(interval);
+      });
     </script>
     <style>
-         a:hover{ cursor:pointer }
+      a:hover {
+        cursor: pointer;
+      }
     </style>
-</body>
-
+  </body>
 </html>
