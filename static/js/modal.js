@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <button class="modal-close"></button>
             <img class="modal-image" src="" alt="放大图片">
             <div class="modal-title"></div>
+            <div class="modal-location"></div>
         </div>
     `;
   document.body.appendChild(modalOverlay);
@@ -22,12 +23,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const title = item.querySelector(".title")
       ? item.querySelector(".title").textContent
       : "";
+    // 获取地点信息，如果没有则设为空字符串
+    const location = item.getAttribute("data-location") || "";
 
     // 为图片添加点击事件
     img.addEventListener("click", function (e) {
       e.preventDefault();
       e.stopPropagation();
-      openModal(this.src, title);
+      openModal(this.src, title, location);
     });
 
     // 为item-info元素也添加点击事件
@@ -35,19 +38,28 @@ document.addEventListener("DOMContentLoaded", function () {
       itemInfo.addEventListener("click", function (e) {
         e.preventDefault();
         e.stopPropagation();
-        openModal(img.src, title);
+        openModal(img.src, title, location);
       });
     }
   });
 
   // 打开弹窗函数
-  function openModal(imgSrc, title) {
+  function openModal(imgSrc, title, location) {
     // 设置弹窗图片源和标题
     const modalImage = modalOverlay.querySelector(".modal-image");
     const modalTitle = modalOverlay.querySelector(".modal-title");
+    const modalLocation = modalOverlay.querySelector(".modal-location");
 
     modalImage.src = imgSrc;
     modalTitle.textContent = title;
+    
+    // 设置地点信息
+    if (location && location.trim() !== "") {
+      modalLocation.innerHTML = `<img src="static/img/address-min.svg" class="location-icon"> ${location}`;
+      modalLocation.style.display = "block";
+    } else {
+      modalLocation.style.display = "none";
+    }
 
     // 显示弹窗
     modalOverlay.classList.add("active");
