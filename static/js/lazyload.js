@@ -39,6 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
               // 图片加载完成后移除懒加载标记类
               img.onload = function () {
                 img.classList.remove("lazy");
+                var myEvent = new Event("resize");
+                window.dispatchEvent(myEvent);
               };
             }
 
@@ -72,8 +74,6 @@ document.addEventListener("DOMContentLoaded", function () {
         img.classList.add("lazy");
         observer.observe(img);
       });
-      var myEvent = new Event("resize");
-      window.dispatchEvent(myEvent);
     }
 
     // 监听AJAX加载完成事件
